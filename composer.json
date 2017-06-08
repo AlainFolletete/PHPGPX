@@ -1,9 +1,9 @@
 {
-  "name": "craygl/phpgpx",
+  "name": "alainfolletete/phpgpx",
   "type": "library",
   "description": "Simple GPX Parser",
   "keywords": ["gpx","gps"],
-  "homepage": "https://github.com/Crayg/PHPGPX",
+  "homepage": "https://github.com/alainfolletete/PHPGPX",
   "license": "MIT",
   "authors": [
     {
