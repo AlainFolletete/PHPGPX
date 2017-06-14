@@ -64,15 +64,13 @@ class TrackSegment implements FromXML
     {
         $trackSegment = new TrackSegment();
 
-        if ( ! empty($xml->trkpt)) {
-            $trackPoints = [];
+        $trackPoints = [];
 
-            foreach ($xml->trkpt as $trackPoint) {
-                array_push($trackPoints, Waypoint::fromXML($trackPoint));
-            }
-
-            $trackSegment->setTrackPoints($trackPoints);
+        foreach ($xml->trkpt as $trackPoint) {
+            array_push($trackPoints, Waypoint::fromXML($trackPoint));
         }
+
+        $trackSegment->setTrackPoints($trackPoints);
 
         if ( ! empty($xml->extensions)) {
             $trackSegment->setExtensions(Extensions::fromXML($xml->extensions[0]));
