@@ -249,7 +249,7 @@ class Route implements FromXML
             $route->setExtensions(Extensions::fromXML($xml->extensions[0]));
         }
 
-        if ( ! empty($xml->rtept)) {
+        if ( isset($xml->rtept)) {
             $routePoints = [];
 
             foreach ($xml->rtept as $routePoint) {
